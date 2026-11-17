@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SXRGIO | Portafolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Fondo con cuadrícula y cuadros aleatorios -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-squares" id="bgSquares" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <a href="#hero" class="logo" aria-label="R.DEV 404">
+      <svg viewBox="0 0 48 40" width="44" height="36" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round">
+        <path d="M18 6H6v28h12M30 6h12v12H30zM30 18l12 16"/>
+      </svg>
+      <span class="logo-text">SERGIO<br />007</span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#hero" class="nav-link active"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v10h-6v-6H9v6H3z"/></svg>HOME</a>
+      <a href="#about" class="nav-link"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>ABOUT</a>
+      <a href="#projects" class="nav-link"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V4h6v3"/></svg>PROJECTS</a>
+      <a href="#services" class="nav-link"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>SERVICES</a>
+      <a href="#skills" class="nav-link"><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>SKILLS</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+        <span class="toggle-knob"></span>
+        <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg>
+      </button>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero section" id="hero">
+      <div class="hero-left">
+        <p class="hi">HI, I'M<span class="cursor" id="typed"></span></p>
+
+        <h1 class="title">
+          <span class="box box-outline"><span class="hl">SE</span>RGIO</span>
+          <span class="by"><span class="box box-blue">ARM</span><span class="num">I</span><span class="box box-blue num-box">J</span><span class="num">O</span></span>
+        </h1>
+
+        <h2 class="role">
+          <span class="blue">FULLSTACK</span> DEVELOPER
+          <br />
+          <span class="role-line">&amp; UI/UX <span class="box box-dark">DESIGNER</span></span>
+        </h2>
+
+        <p class="desc">
+      Creo experiencias digitales excepcionales y de alto rendimiento, interfaces web depuradas y sistemas backend robustos utilizando tecnologías modernas.
+        </p>
+
+        <div class="cta">
+          <a href="#projects" class="btn btn-dark">View Projects
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#" class="btn btn-outline">Download CV
+            <svg viewBox="0 0 24 24"><path d="M12 4v11M6 11l6 6 6-6M5 20h14"/></svg>
+          </a>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <svg viewBox="0 0 24 24"><path d="M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/></svg>
+            <div><strong data-count="5">0</strong><small>SATISFIED CLIENTS</small></div>
+          </div>
+          <div class="stat">
+            <svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V4h6v3"/></svg>
+            <div><strong data-count="10">0</strong><small>COMPLETED PROJECTS</small></div>
+          </div>
+          <div class="stat">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 10l3 2-3 2M12 15h5"/></svg>
+            <div><strong data-count="20">0</strong><small>TECHNOLOGIES</small></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TARJETA DE PERFIL -->
+      <aside class="hero-right">
+        <div class="card">
+          <span class="corner tl"></span><span class="corner tr"></span>
+
+          <!-- Para usar tu propia foto: reemplaza el div .photo por <img src="tu-foto.jpg" class="photo" alt="Foto" /> -->
+          <div class="photo" id="photo">
+            <svg viewBox="0 0 400 380" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs>
+                <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+                  <feGaussianBlur stdDeviation="6" result="b"/>
+                  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+                <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#e9f4ff"/>
+                  <stop offset="0.5" stop-color="#2d8cff"/>
+                  <stop offset="1" stop-color="#0a3fb5"/>
+                </linearGradient>
+              </defs>
+              <g filter="url(#glow)" fill="url(#g1)">
+                <path d="M120 120c10-50 70-80 130-60 40 12 60 40 50 70-10 28-40 40-70 42-30 2-60 6-80-6-18-10-36-24-30-46z"/>
+                <path d="M30 380c10-60 50-100 110-120 40-14 80-10 110 6 50 8 110 50 130 114z"/>
+              </g>
+              <g fill="#0b1220" opacity=".85">
+                <rect x="170" y="150" width="90" height="26" rx="4"/>
+              </g>
+            </svg>
+            <div class="photo-grid"></div>
+            <div class="glitch-blocks" id="glitchBlocks"></div>
+          </div>
+
+          <p class="connect-title">
+            <svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>LET'S CONNECT:
+          </p>
+          <div class="connect">
+            <a href="mailto:tucorreo@ejemplo.com" class="chip">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="chip">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v7M8 7v.01M12 17v-7M12 13c0-2 4-3 4 0v4"/></svg>LinkedIn
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="chip">
+              <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-1-2.6c3.1-.3 6.4-1.5 6.4-7A5.4 5.4 0 0 0 20 4.8 5 5 0 0 0 19.9 1S18.7.7 16 2.5a13.4 13.4 0 0 0-7 0C6.3.7 5.1 1 5.1 1A5 5 0 0 0 5 4.8a5.4 5.4 0 0 0-1.5 3.8c0 5.4 3.3 6.6 6.4 7a3.4 3.4 0 0 0-1 2.6V22"/></svg>GitHub
+            </a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section block" id="about">
+      <h2 class="section-title"><span class="box box-dark">ABOUT</span> ME</h2>
+      <p class="lead">
+        Soy desarrollador fullstack y diseñador UI/UX. Me enfoco en crear productos digitales
+        limpios, rápidos y fáciles de usar, desde la interfaz hasta el servidor.
+      </p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section block" id="projects">
+      <h2 class="section-title"><span class="box box-blue">PROJECTS</span></h2>
+      <div class="grid-3">
+        <article class="project">
+          <div class="thumb"></div>
+          <h3>Proyecto uno</h3>
+          <p>Descripción breve del proyecto y las tecnologías utilizadas.</p>
+          <span class="tags"><em>HTML</em><em>CSS</em><em>JS</em></span>
+        </article>
+        <article class="project">
+          <div class="thumb"></div>
+          <h3>Proyecto dos</h3>
+          <p>Descripción breve del proyecto y las tecnologías utilizadas.</p>
+          <span class="tags"><em>Flask</em><em>Python</em></span>
+        </article>
+        <article class="project">
+          <div class="thumb"></div>
+          <h3>Proyecto tres</h3>
+          <p>Descripción breve del proyecto y las tecnologías utilizadas.</p>
+          <span class="tags"><em>Java</em><em>SQL</em></span>
+        </article>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section block" id="services">
+      <h2 class="section-title"><span class="box box-outline">SERVICES</span></h2>
+      <div class="grid-3">
+        <div class="service"><h3>Desarrollo Web</h3><p>Sitios y aplicaciones web a medida, rápidos y responsivos.</p></div>
+        <div class="service"><h3>Backend &amp; APIs</h3><p>Sistemas robustos, bases de datos y APIs seguras.</p></div>
+        <div class="service"><h3>Diseño UI/UX</h3><p>Interfaces claras y agradables centradas en el usuario.</p></div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section block" id="skills">
+      <h2 class="section-title"><span class="box box-dark">SKILLS</span></h2>
+      <div class="skills">
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>Java</span>
+        <span>Flask</span><span>SQL</span><span>Git</span><span>Figma</span><span>Redes</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">© <span id="year"></span> R.DEV 404 — Todos los derechos reservados.</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
